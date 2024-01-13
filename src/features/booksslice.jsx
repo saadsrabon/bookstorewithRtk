@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const booksApi = createApi({
     reducerPath:"books",
-    baseQuery: fetchBaseQuery({baseUrl: "http://localhost:3001"}),
+    baseQuery: fetchBaseQuery({baseUrl: "http://localhost:9000"}),
     tagTypes: ["Books"], // this is for caching and white listing tags
     endpoints: (builder) => ({
         getAllBooks: builder.query({
