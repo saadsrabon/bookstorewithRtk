@@ -11,7 +11,7 @@ export const Layout = ({children}) => {
       <img src="./images/logo.svg" width="150px" className="object-contain" />
 
       <ul className="hidden md:flex items-center space-x-6">
-        <NavLink to="/" className="font-semibold cursor-pointer" href="index.html" id="lws-bookStore">
+        <NavLink to="/" className="font-semibold cursor-pointer"  id="lws-bookStore">
           <li>Book Store</li>
         </NavLink>
         <NavLink to="/AddBook" className="cursor-pointer" id="lws-addBook">
