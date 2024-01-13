@@ -11,13 +11,14 @@ import { useState } from 'react'
 function App() {
 
   const [isFeatured, setIsFeatured] = useState(null);
+  const [seacrh ,setSearch]=useState("")
   return (
     <>
      <BrowserRouter>
-     <Layout >
+     <Layout  setSearch={setSearch}>
      <Routes>
      
-      <Route path="/" element={<Home isFeatured={isFeatured} setIsFeatured={setIsFeatured} />} />
+      <Route path="/" element={<Home seacrh={seacrh} isFeatured={isFeatured} setIsFeatured={setIsFeatured} />} />
         <Route path="/AddBook" element={<AddBook />} />
         <Route path="/EditBook" element={<EditBooks />} />
      
