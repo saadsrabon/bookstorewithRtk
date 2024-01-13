@@ -37,7 +37,7 @@ export const Home = () => {
             </div>
 
             <div className="space-y-2 mt-4 h-full">
-              <h4 className="lws-book-name">Life Hurts: A Doctor's Personal Journey Through Anorexia</h4>
+              <h4 className="lws-book-name">Life Hurts: A Doctorss Personal Journey Through Anorexia</h4>
               <p className="lws-author">Dr Elizabeth McNaught</p>
               <div className="lws-stars">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="star">
