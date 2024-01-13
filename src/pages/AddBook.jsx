@@ -74,6 +74,8 @@ export default function AddBook() {
 
                 <button disabled={isLoading} type="submit" className="submit" id="lws-submit">Add Book</button>
             </form>
+
+            {isSuccess && <p className="text-green-500 text-center">Book Added Successfully</p>}
         </div>
     </div>
 </main>
