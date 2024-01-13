@@ -44,7 +44,7 @@ export default function AddBook() {
 
                 <div className="space-y-2">
                     <label htmlFor="lws-thumbnail">Image Url</label>
-                    <input required className="text-input" type="text" id="lws-thumbnail" name="thumbnail" />
+                    <input onChange={handleChange} required className="text-input" type="text" id="lws-thumbnail" name="thumbnail" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 pb-4">
