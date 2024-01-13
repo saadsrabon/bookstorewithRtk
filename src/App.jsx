@@ -7,7 +7,7 @@ import EditBooks from './pages/EditBooks'
 import { Layout } from './layout/Layout'
 
 function App() {
-
+  const [isFeatured, setIsFeatured] = useState("");
 
   return (
     <>
@@ -15,7 +15,7 @@ function App() {
      <Layout>
      <Routes>
      
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home isFeatured={isFeatured} />} />
         <Route path="/AddBook" element={<AddBook />} />
         <Route path="/EditBook" element={<EditBooks />} />
      

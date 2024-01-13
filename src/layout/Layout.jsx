@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom"
 
 
 export const Layout = ({children}) => {
+   
   return (
     <div>
          <nav className="py-4 2xl:px-6">
