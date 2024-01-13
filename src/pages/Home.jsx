@@ -13,7 +13,7 @@ export const Home = ({isFeatured ,setIsFeatured}) => {
         content=<div>{error}</div>
     }
     else{
-        content = data.filter(book =>book.featured === isFeatured).map((book)=>(
+        content = data.filter(book =>book.featured !== isFeatured).map((book)=>(
             <div key={book?.id} className="book-card">
           <img className="h-[240px] w-[170px] object-cover"
             src={book?.thumbnail} alt="book" />
@@ -72,8 +72,8 @@ export const Home = ({isFeatured ,setIsFeatured}) => {
         <h4 className="mt-2 text-xl font-bold">Book List</h4>
 
         <div className="flex items-center space-x-4">
-          <button className="lws-filter-btn active-filter">All</button>
-          <button className="lws-filter-btn">Featured</button>
+          <button onClick={()=>setIsFeatured(null)} className="lws-filter-btn active-filter">All</button>
+          <button onClick={()=>setIsFeatured(false)} className="lws-filter-btn">Featured</button>
         </div>
       </div>
       <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">

@@ -10,7 +10,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const [isFeatured, setIsFeatured] = useState("");
+  const [isFeatured, setIsFeatured] = useState(null);
   return (
     <>
      <BrowserRouter>
