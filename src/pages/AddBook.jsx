@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useAddBookMutation } from "../features/booksslice";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AddBook() {
+    const navigate =useNavigate()
     const [book, setBook] = useState({
         name: "",
         author: "",
@@ -26,6 +28,7 @@ export default function AddBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     addbook({...book, featured: isChecked});
+
   }
 
   const handleCheckboxChange = (event) => {
