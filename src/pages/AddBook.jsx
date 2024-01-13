@@ -29,6 +29,10 @@ export default function AddBook() {
     e.preventDefault();
     addbook({...book, featured: isChecked});
 
+    if(isSuccess){
+        navigate("/")
+    }
+
   }
 
   const handleCheckboxChange = (event) => {
