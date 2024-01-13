@@ -35,4 +35,9 @@ const booksApi = createApi({
     }),
 });
 
-export default booksApi.reducer;
+export const {
+    useGetAllBooksQuery,
+    useAddBookMutation,
+    useDeleteBookMutation,
+    useEditBookMutation
+} = booksApi;
