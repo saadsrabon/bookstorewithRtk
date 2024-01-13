@@ -14,7 +14,7 @@ export const Layout = ({children}) => {
         <a className="font-semibold cursor-pointer" href="index.html" id="lws-bookStore">
           <li>Book Store</li>
         </a>
-        <NavLink to="/AddBook" className="cursor-pointer" href="AddBook.html" id="lws-addBook">
+        <NavLink to="/AddBook" className="cursor-pointer" id="lws-addBook">
           <li>Add Book</li>
         </NavLink>
       </ul>
