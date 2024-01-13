@@ -9,9 +9,9 @@ export const Home = () => {
     if(isLoading){
         content=<div>Loading...</div>
     }
-    else if(error){
-        content=<div>{error}</div>
-    }
+    // else if(error){
+    //     content=<div>{error}</div>
+    // }
     else{
         content = data.map((book)=>(
             <div key={book?.id} className="book-card">
