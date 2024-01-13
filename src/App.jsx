@@ -12,7 +12,7 @@ function App() {
   return (
     <>
      <BrowserRouter>
-     <Layout>
+     <Layout setIsFeatured={setIsFeatured}>
      <Routes>
      
       <Route path="/" element={<Home isFeatured={isFeatured} />} />
