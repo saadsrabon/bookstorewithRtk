@@ -1,6 +1,8 @@
+import { useGetAllBooksQuery } from "../features/booksslice";
 
 
 export const Home = () => {
+    const {data, error, isLoading} = useGetAllBooksQuery();
   return (
     <main className="py-12 px-6 2xl:px-6 container">
     <div className="order-2 xl:-order-1">
