@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { useGetAllBooksQuery } from "../features/booksslice";
 
 
 export const Home = ({isFeatured ,setIsFeatured}) => {
     const {data, error, isLoading} = useGetAllBooksQuery();
- 
+   const [seacrh ,setSearch]=useState("")
     // take decision  what to show  based on state
     let content=null;
     if(isLoading){
