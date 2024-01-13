@@ -3,7 +3,7 @@ import { useGetAllBooksQuery } from "../features/booksslice";
 
 export const Home = () => {
     const {data, error, isLoading} = useGetAllBooksQuery();
-   
+ 
     // take decision  what to show  based on state
     let content=null;
     if(isLoading){
@@ -13,7 +13,7 @@ export const Home = () => {
         content=<div>{error}</div>
     }
     else{
-        content = data.map((book)=>(
+        content = data.filter(book =>book.featured === isFeatured).map((book)=>(
             <div key={book?.id} className="book-card">
           <img className="h-[240px] w-[170px] object-cover"
             src={book?.thumbnail} alt="book" />
