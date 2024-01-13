@@ -14,12 +14,22 @@ export default function AddBook() {
 
     const [addVideo, { isLoading, isSuccess, isError }]= useAddBookMutation();
     
+    const handleChange = (e) => {
+        e.preventDefault();
+        const { name, value } = e.target;
+        setBook((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    }
+  const handleSubmit = (e) => {}
+    console.log(book);
   return (
     <main className="py-6 2xl:px-6">
     <div className="container">
         <div className="p-8 overflow-hidden bg-white shadow-cardShadow rounded-md max-w-xl mx-auto">
             <h4 className="mb-8 text-xl font-bold text-center">Add New Book</h4>
-            <form className="book-form">
+            <form onSubmit={handleChange} className="book-form">
                 <div className="space-y-2">
                     <label htmlFor="lws-bookName">Book Name</label>
                     <input required className="text-input" type="text" id="lws-bookName" name="name" />
