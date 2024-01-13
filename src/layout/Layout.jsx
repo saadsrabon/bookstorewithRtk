@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 
-export const Layout = () => {
+export const Layout = ({children}) => {
   return (
     <div>
          <nav className="py-4 2xl:px-6">
@@ -29,6 +30,7 @@ export const Layout = () => {
       </form>
     </div>
   </nav>
+  {children}
     </div>
   )
 }
