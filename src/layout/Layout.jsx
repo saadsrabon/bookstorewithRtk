@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { NavLink } from "react-router-dom"
+
 
 export const Layout = ({children}) => {
   return (
@@ -12,9 +14,9 @@ export const Layout = ({children}) => {
         <a className="font-semibold cursor-pointer" href="index.html" id="lws-bookStore">
           <li>Book Store</li>
         </a>
-        <a className="cursor-pointer" href="AddBook.html" id="lws-addBook">
+        <NavLink to="/AddBook" className="cursor-pointer" href="AddBook.html" id="lws-addBook">
           <li>Add Book</li>
-        </a>
+        </NavLink>
       </ul>
 
       <form className="flex items-center">
