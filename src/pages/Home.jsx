@@ -3,7 +3,7 @@ import { useGetAllBooksQuery } from "../features/booksslice";
 
 export const Home = () => {
     const {data, error, isLoading} = useGetAllBooksQuery();
-
+   
     // take decision  what to show  based on state
     let content=null;
     if(isLoading){
@@ -16,7 +16,7 @@ export const Home = () => {
         content = data.map((book)=>(
             <div key={book?.id} className="book-card">
           <img className="h-[240px] w-[170px] object-cover"
-            src="https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg" alt="book" />
+            src={book?.thumbnail} alt="book" />
           <div className="flex-1 h-full pr-2 pt-2 flex flex-col">
             <div className="flex items-center justify-between">
               <span className="lws-badge">featured</span>
@@ -37,8 +37,8 @@ export const Home = () => {
             </div>
 
             <div className="space-y-2 mt-4 h-full">
-              <h4 className="lws-book-name">Life Hurts: A Doctorss Personal Journey Through Anorexia</h4>
-              <p className="lws-author">Dr Elizabeth McNaught</p>
+              <h4 className="lws-book-name">{book?.name}</h4>
+              <p className="lws-author">{book?.author}</p>
               <div className="lws-stars">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="star">
                   <path fillRule="evenodd"
@@ -58,7 +58,7 @@ export const Home = () => {
                     clipRule="evenodd" />
                 </svg>
               </div>
-              <p className="lws-price">BDT 14</p>
+              <p className="lws-price">BDT {book?.price}</p>
             </div>
           </div>
         </div>
