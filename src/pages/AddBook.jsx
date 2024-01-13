@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useAddBookMutation } from "../features/booksslice";
 
@@ -71,7 +72,7 @@ export default function AddBook() {
                     <label htmlFor="lws-featured" className="ml-2 text-sm"> This is a featured book </label>
                 </div>
 
-                <button type="submit" className="submit" id="lws-submit">Add Book</button>
+                <button disabled={isLoading} type="submit" className="submit" id="lws-submit">Add Book</button>
             </form>
         </div>
     </div>
