@@ -34,7 +34,7 @@ export default function AddBook() {
             <form onSubmit={handleSubmit} className="book-form">
                 <div className="space-y-2">
                     <label htmlFor="lws-bookName">Book Name</label>
-                    <input required className="text-input" type="text" id="lws-bookName" name="name" />
+                    <input onChange={handleChange} required className="text-input" type="text" id="lws-bookName" name="name" />
                 </div>
 
                 <div className="space-y-2">
