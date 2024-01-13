@@ -22,7 +22,9 @@ export default function AddBook() {
             [name]: value,
         }));
     }
-  const handleSubmit = (e) => {}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
     console.log(book);
   return (
     <main className="py-6 2xl:px-6">
