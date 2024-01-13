@@ -3,20 +3,18 @@ import { useGetAllBooksQuery } from "../features/booksslice";
 
 export const Home = () => {
     const {data, error, isLoading} = useGetAllBooksQuery();
-  return (
-    <main className="py-12 px-6 2xl:px-6 container">
-    <div className="order-2 xl:-order-1">
-      <div className="flex items-center justify-between mb-12">
-        <h4 className="mt-2 text-xl font-bold">Book List</h4>
 
-        <div className="flex items-center space-x-4">
-          <button className="lws-filter-btn active-filter">All</button>
-          <button className="lws-filter-btn">Featured</button>
-        </div>
-      </div>
-      <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* <!-- Card 1 --> */}
-        <div className="book-card">
+    // take decision  what to show  based on state
+    let content=null;
+    if(isLoading){
+        content=<div>Loading...</div>
+    }
+    else if(error){
+        content=<div>{error}</div>
+    }
+    else{
+        content = data.map((book)=>(
+            <div key={book?.id} className="book-card">
           <img className="h-[240px] w-[170px] object-cover"
             src="https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg" alt="book" />
           <div className="flex-1 h-full pr-2 pt-2 flex flex-col">
@@ -64,6 +62,25 @@ export const Home = () => {
             </div>
           </div>
         </div>
+        ))
+    }
+
+  return (
+    <main className="py-12 px-6 2xl:px-6 container">
+    <div className="order-2 xl:-order-1">
+      <div className="flex items-center justify-between mb-12">
+        <h4 className="mt-2 text-xl font-bold">Book List</h4>
+
+        <div className="flex items-center space-x-4">
+          <button className="lws-filter-btn active-filter">All</button>
+          <button className="lws-filter-btn">Featured</button>
+        </div>
+      </div>
+      <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* <!-- Card 1 --> */}
+        {
+            content
+        }
 
 
       </div>
