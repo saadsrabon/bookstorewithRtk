@@ -20,7 +20,7 @@ function App() {
      
       <Route path="/" element={<Home seacrh={seacrh} isFeatured={isFeatured} setIsFeatured={setIsFeatured} />} />
         <Route path="/AddBook" element={<AddBook />} />
-        <Route path="/EditBook" element={<EditBooks />} />
+        <Route path="/EditBook/:id" element={<EditBooks />} />
      
         
 
