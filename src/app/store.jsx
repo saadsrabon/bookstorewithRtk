@@ -2,8 +2,9 @@ import { configureStore } from "@reduxjs/toolkit";
 
 const store =configureStore({
     reducer: {
-        // add reducers here
+        // dd reducers here
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
 });
 
 export default store;

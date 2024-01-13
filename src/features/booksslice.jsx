@@ -34,3 +34,5 @@ const booksApi = createApi({
         }),
     }),
 });
+
+export default booksApi.reducer;
