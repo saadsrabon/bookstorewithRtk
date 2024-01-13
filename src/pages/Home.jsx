@@ -63,8 +63,9 @@ export const Home = ({isFeatured ,setIsFeatured ,seacrh}) => {
               <p className="lws-price">BDT {book?.price}</p>
             </div>
           </div>
-          {isSuccess && <p className="text-green-500 text-center">Book Deleted Successfully</p>}
+          
         </div>
+        
         ))
     }
 
@@ -87,6 +88,7 @@ export const Home = ({isFeatured ,setIsFeatured ,seacrh}) => {
 
 
       </div>
+      {isSuccess && <p className="text-green-500 text-center">Book Deleted Successfully</p>}
     </div>
   </main>
   )
