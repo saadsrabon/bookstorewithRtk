@@ -11,7 +11,7 @@ export default function AddBook() {
         rating: "",
         featured: false,
     });
-
+    const [isChecked, setChecked] = useState(false);
     const [addVideo, { isLoading, isSuccess, isError }]= useAddBookMutation();
     
     const handleChange = (e) => {
@@ -61,7 +61,7 @@ export default function AddBook() {
                 </div>
 
                 <div className="flex items-center">
-                    <input onChange={handleChange} id="lws-featured" type="checkbox" name="featured" className="w-4 h-4" />
+                    <input  id="lws-featured" type="checkbox" name="featured" className="w-4 h-4" />
                     <label htmlFor="lws-featured" className="ml-2 text-sm"> This is a featured book </label>
                 </div>
 
