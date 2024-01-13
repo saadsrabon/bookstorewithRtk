@@ -28,9 +28,10 @@ export default function AddBook() {
   }
 
   const handleCheckboxChange = (event) => {
+    console.log(event.target.checked);
     setChecked(event.target.checked);
   };
-    console.log(book);
+    console.log(isChecked)
   return (
     <main className="py-6 2xl:px-6">
     <div className="container">
@@ -60,13 +61,13 @@ export default function AddBook() {
 
                     <div className="space-y-2">
                         <label htmlFor="lws-rating">Rating</label>
-                        <input onChange={handleCheckboxChange} required className="text-input" type="number" id="lws-rating" name="rating" min="1"
+                        <input  onChange={handleChange}  required className="text-input" type="number" id="lws-rating" name="rating" min="1"
                             max="5" />
                     </div>
                 </div>
 
                 <div className="flex items-center">
-                    <input  id="lws-featured" type="checkbox" name="featured" className="w-4 h-4" />
+                    <input onChange={handleCheckboxChange}  id="lws-featured" type="checkbox" name="featured" className="w-4 h-4" />
                     <label htmlFor="lws-featured" className="ml-2 text-sm"> This is a featured book </label>
                 </div>
 

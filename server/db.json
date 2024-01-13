@@ -26,6 +26,33 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "ddd",
+      "author": "dd",
+      "thumbnail": "5454",
+      "price": "500",
+      "rating": "",
+      "featured": false,
+      "id": 5
+    },
+    {
+      "name": "dd",
+      "author": "dd",
+      "thumbnail": "dd",
+      "price": "464654",
+      "rating": "",
+      "featured": false,
+      "id": 6
+    },
+    {
+      "name": "Akash",
+      "author": "ss",
+      "thumbnail": "ss",
+      "price": "4454",
+      "rating": "5",
+      "featured": true,
+      "id": 7
     }
   ]
 }
