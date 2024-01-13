@@ -76,6 +76,7 @@ export default function AddBook() {
             </form>
 
             {isSuccess && <p className="text-green-500 text-center">Book Added Successfully</p>}
+            {isError && <p className="text-red-500 text-center">Something went wrong</p>}
         </div>
     </div>
 </main>
