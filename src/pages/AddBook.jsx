@@ -31,7 +31,7 @@ export default function AddBook() {
     <div className="container">
         <div className="p-8 overflow-hidden bg-white shadow-cardShadow rounded-md max-w-xl mx-auto">
             <h4 className="mb-8 text-xl font-bold text-center">Add New Book</h4>
-            <form onSubmit={handleChange} className="book-form">
+            <form onSubmit={handleSubmit} className="book-form">
                 <div className="space-y-2">
                     <label htmlFor="lws-bookName">Book Name</label>
                     <input required className="text-input" type="text" id="lws-bookName" name="name" />
@@ -39,7 +39,7 @@ export default function AddBook() {
 
                 <div className="space-y-2">
                     <label htmlFor="lws-author">Author</label>
-                    <input required className="text-input" type="text" id="lws-author" name="author" />
+                    <input onChange={handleChange} required className="text-input" type="text" id="lws-author" name="author" />
                 </div>
 
                 <div className="space-y-2">
