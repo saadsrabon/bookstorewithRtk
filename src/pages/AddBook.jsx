@@ -1,6 +1,15 @@
+import { useState } from "react";
 
 
 export default function AddBook() {
+    const [book, setBook] = useState({
+        name: "",
+        author: "",
+        thumbnail: "",
+        price: "",
+        rating: "",
+        featured: false,
+    });
   return (
     <main className="py-6 2xl:px-6">
     <div className="container">
