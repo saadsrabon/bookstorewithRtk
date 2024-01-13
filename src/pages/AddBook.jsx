@@ -50,7 +50,7 @@ export default function AddBook() {
                 <div className="grid grid-cols-2 gap-8 pb-4">
                     <div className="space-y-2">
                         <label htmlFor="lws-price">Price</label>
-                        <input required className="text-input" type="number" id="lws-price" name="price" />
+                        <input onChange={handleChange} required className="text-input" type="number" id="lws-price" name="price" />
                     </div>
 
                     <div className="space-y-2">
