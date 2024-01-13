@@ -1,8 +1,8 @@
-import { useState } from "react";
+
 import { useGetAllBooksQuery } from "../features/booksslice";
 
 
-export const Home = ({isFeatured ,setIsFeatured}) => {
+export const Home = ({isFeatured ,setIsFeatured ,seacrh}) => {
     const {data, error, isLoading} = useGetAllBooksQuery();
 
     // take decision  what to show  based on state
