@@ -12,7 +12,7 @@ export default function AddBook() {
         featured: false,
     });
     const [isChecked, setChecked] = useState(false);
-    const [addVideo, { isLoading, isSuccess, isError }]= useAddBookMutation();
+    const [addbook, { isLoading, isSuccess, isError }]= useAddBookMutation();
     
     const handleChange = (e) => {
         e.preventDefault();
@@ -24,7 +24,12 @@ export default function AddBook() {
     }
   const handleSubmit = (e) => {
     e.preventDefault();
+    addbook({...book, featured: isChecked});
   }
+
+  const handleCheckboxChange = (event) => {
+    setChecked(event.target.checked);
+  };
     console.log(book);
   return (
     <main className="py-6 2xl:px-6">
@@ -55,7 +60,7 @@ export default function AddBook() {
 
                     <div className="space-y-2">
                         <label htmlFor="lws-rating">Rating</label>
-                        <input onChange={handleChange} required className="text-input" type="number" id="lws-rating" name="rating" min="1"
+                        <input onChange={handleCheckboxChange} required className="text-input" type="number" id="lws-rating" name="rating" min="1"
                             max="5" />
                     </div>
                 </div>
